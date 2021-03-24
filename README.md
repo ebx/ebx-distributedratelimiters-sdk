@@ -1,7 +1,29 @@
 [![Maven Central](https://img.shields.io/maven-central/v/com.echobox/ebx-distributedratelimiters-sdk.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.echobox%22%20AND%20a:%22ebx-distributedratelimiters-sdk%22) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://raw.githubusercontent.com/ebx/ebx-distributedratelimiters-sdk/master/LICENSE) [![Build Status](https://travis-ci.org/ebx/ebx-distributedratelimiters-sdk.svg?branch=dev)](https://travis-ci.org/ebx/ebx-distributedratelimiters-sdk)
 # ebx-distributedratelimiters-sdk
 
-TODO
+This project provides the three core rate limiter/semaphore implementations listed below, each of
+ which uses a [CacheService](https://github.com/ebx/ebx-cachebase-sdk) to issue tokens or permits
+for processes we wish to subject to rate or concurrency limits.
+
+* [Leaky Token Bucket](https://en.wikipedia.org/wiki/Leaky_bucket) - Used to allow burst rates
+but not beyond some configured limit. One the configured limit is past an exception occurs. See
+ [here](https://github.com/ebx/ebx-distributedratelimiters-sdk/blob/dev/DistributedRateLimiters/src/main/java/com/echobox/distributedratelimiters/DistributedRateLimiterTokenBucket.java) for
+  more information.
+ * Time Slice - Used to smooth out the rate at which operations can occur concurrently. If too
+ many operations occur concurrently this will block. See 
+ [here](https://github.com/ebx/ebx-distributedratelimiters-sdk/blob/dev/DistributedRateLimiters/src/main/java/com/echobox/distributedratelimiters/DistributedRateLimiterTimeSlice.java) for more information.
+* [Semaphore](https://en.wikipedia.org/wiki/Semaphore_(programming)) - Only allow X concurrent
+ events to occur within the sempahore. Operations block while waiting to enter the sempahore. See 
+ [here](https://github.com/ebx/ebx-distributedratelimiters-sdk/blob/dev/DistributedRateLimiters/src/main/java/com/echobox/distributedratelimiters/DistributedSemaphore.java) for more information.
+
+## Getting Started
+
+Please see examples in the [Demo](https://github.com/ebx/ebx-distributedratelimiters-sdk/tree/dev/DistributedRateLimitersDemo/src/main/java/com/echobox/distributedratelimiters/demo) 
+project.
+
+**Important Note:** It's not ideal but for the demos to work you must first provide endpoint and
+ port information for a redis cluster in _src/main/resources/app.properties_. Feel free to
+  recommend a better way 😊
 
 ## Installation
 
