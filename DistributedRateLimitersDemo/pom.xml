@@ -9,6 +9,8 @@
 		<version>1.0.0</version>
 	</parent>
 
+        <name>ebx-distributedratelimiters-sdk-demos</name>
+
 	<groupId>com.echobox</groupId>
 	<artifactId>ebx-distributedratelimiters-sdk-demos</artifactId>
 	<packaging>jar</packaging>

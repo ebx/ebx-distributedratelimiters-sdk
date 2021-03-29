@@ -42,11 +42,11 @@ public class DistributedRateLimiterTokenBucketMock
   
   /**
    * Creates a new DistributedRateLimiterTokenBucket mock
-   * @param cacheService
-   * @param limiterId
-   * @param bucketSize
-   * @param permitsPerTimeInterval
-   * @param timeIntervalSeconds
+   * @param cacheService The cache service we use
+   * @param limiterId The unique id for this RateLimiter, which links distributed limiters.
+   * @param bucketSize The size of the bucket specified as total number of tokens it can hold
+   * @param permitsPerTimeInterval The number of permits per time interval allowed
+   * @param timeIntervalSeconds The duration of the time interval in seconds
    * @return The mocked DistributedRateLimiterTokenBucket
    */
   @Mock
