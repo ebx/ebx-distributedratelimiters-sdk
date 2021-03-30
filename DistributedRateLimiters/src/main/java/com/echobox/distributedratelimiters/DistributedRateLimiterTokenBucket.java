@@ -114,7 +114,7 @@ public class DistributedRateLimiterTokenBucket extends DistributedRateLimiterBas
   /**
    * Create distributed rate limiter.
    * 
-   * @param cacheService 
+   * @param cacheService The cache service we use
    * @param limiterId The unique id for this RateLimiter, which links distributed limiters.
    * @param bucketSize The size of the bucket specified as total number of tokens it can hold
    * @param permitsPerTimeInterval The number of permits per time interval allowed

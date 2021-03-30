@@ -69,6 +69,17 @@ public abstract class DistributedRateLimiterBase {
     return tryAcquire(shutdownMonitor, timeoutSeconds, this::tryAcquireInternal);
   }
 
+  /**
+   * Attempt to acquire a permit in the provided time allowed.
+   * @param shutdownMonitor the shutdown monitor
+   * @param timeoutSeconds The number of seconds over which to attempt the acquire. Use  a
+   *                       timeout of zero to only make a single attempt without waiting.
+   * @param tryAcquireFunc The function that attempts to get the permit
+   * @return True if a permit was acquired in the available time, false otherwise
+   * @throws ShutdownRequestedException This method *may* throw a ShutdownRequestedException in
+   * the event of a request to shutdown, but this is not guaranteed
+   * @throws InterruptedException the interrupted exception
+   */
   protected boolean tryAcquire(ShutdownMonitor shutdownMonitor, int timeoutSeconds,
       Supplier<Boolean> tryAcquireFunc) throws ShutdownRequestedException, InterruptedException {
 

@@ -35,10 +35,14 @@ public class DistributedSemaphoreMock extends MockUp<DistributedSemaphore> {
 
   /**
    * Creates a new DistributedSemaphore mock
-   * @param cacheService
-   * @param limiterId
-   * @param concurrentPermits
-   * @param maxProcessRunTimeSecs
+   * @param cacheService The cache service we will use
+   * @param limiterId The unique id for this RateLimiter, which links distributed limiters.
+   * @param concurrentPermits The maximum number of concurrent permits allowed
+   * @param maxProcessRunTimeSecs The default length of time that this semaphore control item in
+   *                              MEMCACHE will last for unless either a tryAcquire or release
+   *                              takes place.  VERY IMPORTANT!!! The processes being protected
+   *                              by this semaphore must NEVER takes more than  this interval to
+   *                              ensure everything works as intended.
    * @return The mocked DistributedSemaphore
    */
   @Mock
