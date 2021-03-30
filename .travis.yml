@@ -43,7 +43,7 @@ before_deploy:
 deploy:
   provider: releases
   api_key:
-    secure: <<API_KEY>>
+    secure: 1U7lYTIKgaohn6CeRkLQGyYDy6EjmMH9Q5dakuazMYRM9TG+ucbdW2Yjd4aXFJXb+6K5R3IBJ2pNEzwFH0m/wk1WpMMjFkFqFA+51sjwbkV9lxH5Qdn65NhtKWGskWGxXbDFDO017uXxXJrE7KPFnEteCMbufQcR9m17HiQQ7TnDIblh8FTVR/1oRv+zNHjMqyK/O3feF/uC5cvhlp3VS9Y55AVXWk+vjs5QfWsLyktET9+NJK8yGPVZYQMcbvCxvZQfIHIDgjry5baqxmtxRPi4BHkOUMZ0hTIctAjc3MuenOXOV1KjxZ1Kb+Pjgaziw2QAt8hav4NltUfj82uUubicPCTGNotctbnYotINp9JqjraLgnw9gwaU65eO55jGg7olZMwU/Mme41BKOvWbXfEtlV301r/Rn/hBUSjRCGXUrbAnb5+dacxIX1tAFjaYatm8AYcs0lv481rD0CqU6/1acSO0+OMU5kUKeMrHGU+I17pele8NlRotQSNh3yEvobru93NS/LqNr3xQ4e+NJ+sAoSOi4A7AJ/xAjUlOHRZIP/s75HSCfAvysumfiYCf7MX05QAfKqaY/cxKaAjIEn8w2focxqzIa4MxiMfjgJB0QFCZyKZ4PTAkvWMfxxm3NkvUkI9/ARCsv5Nyg5PV2C+3lfkKi27tCXM0ZroaXOU=
   file: 
     - DistributedRateLimiters/target/ebx-distributedratelimiters-sdk-$MVN_VERSION.jar
     - DistributedRateLimiters/target/ebx-distributedratelimiters-sdk-$MVN_VERSION-javadoc.jar
