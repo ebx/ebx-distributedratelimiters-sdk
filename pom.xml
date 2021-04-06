@@ -13,6 +13,8 @@
   <properties>
     <maven.surefire.version>3.0.0-M5</maven.surefire.version>
     <junit.version>5.7.1</junit.version>
+    <maven.deploy.skip>true</maven.deploy.skip>
+    <phase.prop>none</phase.prop>
   </properties>
 
   <!-- Add JUnit to all children -->
@@ -179,6 +181,15 @@
               <nexusUrl>https://oss.sonatype.org/</nexusUrl>
               <autoReleaseAfterClose>true</autoReleaseAfterClose>
             </configuration>
+            <executions>
+              <execution>
+                <id>default-deploy</id>
+                <phase>${phase.prop}</phase>
+                <goals>
+                  <goal>deploy</goal>
+                </goals>
+              </execution>
+            </executions>
           </plugin>
           <!-- To generate javadoc -->
           <plugin>
