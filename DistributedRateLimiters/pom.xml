@@ -6,7 +6,7 @@
   <parent>
     <groupId>com.echobox</groupId>
     <artifactId>ebx-distributedratelimiters-sdk-parent</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
   </parent>
 
   <name>ebx-distributedratelimiters-sdk</name>
@@ -45,8 +45,6 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <maven.deploy.skip>false</maven.deploy.skip>
-    <phase.prop>deploy</phase.prop>
   </properties>
 
   <build>
