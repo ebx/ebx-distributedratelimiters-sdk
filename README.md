@@ -33,7 +33,7 @@ For our latest stable release use:
 <dependency>
   <groupId>com.echobox</groupId>
   <artifactId>ebx-distributedratelimiters-sdk</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
 </dependency>
 ```
 

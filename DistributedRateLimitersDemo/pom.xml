@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.echobox</groupId>
 		<artifactId>ebx-distributedratelimiters-sdk-parent</artifactId>
-		<version>1.0.0</version>
+		<version>1.0.1</version>
 	</parent>
 
         <name>ebx-distributedratelimiters-sdk-demos</name>
