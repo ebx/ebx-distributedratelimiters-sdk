@@ -45,6 +45,7 @@ deploy:
   api_key:
     secure: SdlO0CFdZlBX6yAJUl+kIut6ytfKAeZe0JVvlxaZKBC9ZnIi9TM03dFeBIoxC2BJ9PAWzDq44Ej1wEY+ymg+ulDpAbR6+f7RBZ3yvwjN66taRmuZb7mpfemsFrr3DmgtXgZbWFn3YCIN3kqoP2wask2dQfM+I5qGdMXdZP05MKeD/mMbOkaEFCoXu5PtZmqGYX3Z0OVcBoTVNZFK3rHzwUMr8AO9aNeFUnL3FErfe8iNEFKFpl+oQprqSmaOO/itMJ2dSDpAa9YWww/NBbnXO1wa4UaJxq3A6Eq1DrQvFW/yHHQTHGUNFqLDNOE1Kgn+muBK+VlbuNmo3zVvTHWcSrUrxZRKIHmOBrsGFmkJfyW85YncriWemMQ/+PG4l0QlAApGDU/WDTEPWfwX2hYtTOFt+bEgzRczViuqbsbV9U5PWR03MumvDv3AnQ6p5A40OaO1NTCi8VzdwTgvD6C9ZmUySp++OXcqSoE0lBgvmp3rdwkW1SUDqzYVu8jBdilAF4cxqY0fSGxIPjPktU1sHgBfoxOQAyenh6B0fQnf8E6ffK8KYjylCpFBEmEeNrtO2ufEPKPRLixvNDzVzsq0r4Vc535Dmtzx6kWURHGlpbuBt9Rwvyf8dQEdtxHL9G5L2qB/5O1cDlBZS876Nmny6bMztipJiHlm2PMuPmGP9+4=
   file: 
+    - target/ebx-distributedratelimiters-sdk-parent-1.0.1.pom
     - DistributedRateLimiters/target/ebx-distributedratelimiters-sdk-$MVN_VERSION.jar
     - DistributedRateLimiters/target/ebx-distributedratelimiters-sdk-$MVN_VERSION-javadoc.jar
     - DistributedRateLimiters/target/ebx-distributedratelimiters-sdk-$MVN_VERSION-sources.jar

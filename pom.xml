@@ -7,14 +7,23 @@
 
   <groupId>com.echobox</groupId>
   <artifactId>ebx-distributedratelimiters-sdk-parent</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>pom</packaging>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
 
   <properties>
     <maven.surefire.version>3.0.0-M5</maven.surefire.version>
     <junit.version>5.7.1</junit.version>
-    <maven.deploy.skip>true</maven.deploy.skip>
-    <phase.prop>none</phase.prop>
   </properties>
 
   <!-- Add JUnit to all children -->
@@ -181,15 +190,6 @@
               <nexusUrl>https://oss.sonatype.org/</nexusUrl>
               <autoReleaseAfterClose>true</autoReleaseAfterClose>
             </configuration>
-            <executions>
-              <execution>
-                <id>default-deploy</id>
-                <phase>${phase.prop}</phase>
-                <goals>
-                  <goal>deploy</goal>
-                </goals>
-              </execution>
-            </executions>
           </plugin>
           <!-- To generate javadoc -->
           <plugin>
