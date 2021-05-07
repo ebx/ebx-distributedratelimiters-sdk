@@ -43,13 +43,13 @@ before_deploy:
 deploy:
   provider: releases
   api_key:
-    secure: SdlO0CFdZlBX6yAJUl+kIut6ytfKAeZe0JVvlxaZKBC9ZnIi9TM03dFeBIoxC2BJ9PAWzDq44Ej1wEY+ymg+ulDpAbR6+f7RBZ3yvwjN66taRmuZb7mpfemsFrr3DmgtXgZbWFn3YCIN3kqoP2wask2dQfM+I5qGdMXdZP05MKeD/mMbOkaEFCoXu5PtZmqGYX3Z0OVcBoTVNZFK3rHzwUMr8AO9aNeFUnL3FErfe8iNEFKFpl+oQprqSmaOO/itMJ2dSDpAa9YWww/NBbnXO1wa4UaJxq3A6Eq1DrQvFW/yHHQTHGUNFqLDNOE1Kgn+muBK+VlbuNmo3zVvTHWcSrUrxZRKIHmOBrsGFmkJfyW85YncriWemMQ/+PG4l0QlAApGDU/WDTEPWfwX2hYtTOFt+bEgzRczViuqbsbV9U5PWR03MumvDv3AnQ6p5A40OaO1NTCi8VzdwTgvD6C9ZmUySp++OXcqSoE0lBgvmp3rdwkW1SUDqzYVu8jBdilAF4cxqY0fSGxIPjPktU1sHgBfoxOQAyenh6B0fQnf8E6ffK8KYjylCpFBEmEeNrtO2ufEPKPRLixvNDzVzsq0r4Vc535Dmtzx6kWURHGlpbuBt9Rwvyf8dQEdtxHL9G5L2qB/5O1cDlBZS876Nmny6bMztipJiHlm2PMuPmGP9+4=
+    secure: R+aGMyde1OrcyhP2rkPz4q0OEcMM9hHeu/Balo0Y8NiuvoGuUaYFaQdEg/N2Qi90ki/5rxChuKUaTGDtCWEqYi8dLgvcmXUwvhaOwsvZl+24ucInJkaXNnRD3oVxNTsw8PaCNPZzY1xFfARXWna250jjA1TMlVT7ACraQ4xBUxOGwtvHRIb2T7v5DsWN36wUALok3FK/QunUX8Uq89G/gsylXISdxG0fG/Hopbxi6HJ/ZBOGp0qCUQgvpsLP+IZAX0aRqyrWRF2BmtsiqP+yRS7Mi+JwVlJBDgD6JmmePNh4BrzL2MjyvoKaHyUup7jwdtngIQSE77Hj82MClnjN7mYd9egDFf6tEPCqkNjRw9NtD7gNVDPaiAonERw2YjE2dHmXX8DFX4KohPUo7elpx2uMHvbprrZFIC1/jtjJ/VrDm2XxPHceFSJdguE0A2y6Bzz1UuuJpsCpHY1XV76erWU70kLh7u6PUcROT3eWohswQjKvOHZM+2F/MH05gwTN4pNs7IDUvZ3Koo31M7dI/qBEnZYgm9SzAZn+zVbkQzYuBZ4BDltLLO8ijVL9ZWnwh3CDCjM9A1G6qY9pMEI158H+uPSzC92mhtR45oB/yyGt0e8K6AnSSHHXEHglANmxULoC1RD57sYx+ejXdqlVGcsG3VqKcd/MmyfcmdGHUnY=
   file: 
     - target/ebx-distributedratelimiters-sdk-parent-1.0.1.pom
     - DistributedRateLimiters/target/ebx-distributedratelimiters-sdk-$MVN_VERSION.jar
     - DistributedRateLimiters/target/ebx-distributedratelimiters-sdk-$MVN_VERSION-javadoc.jar
     - DistributedRateLimiters/target/ebx-distributedratelimiters-sdk-$MVN_VERSION-sources.jar
-  skip_cleanup: true
+  edge: true
   on:
     repo: $REPO
     branch: $RELEASE_BRANCH
