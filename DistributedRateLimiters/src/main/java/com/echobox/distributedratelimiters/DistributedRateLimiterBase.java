@@ -89,7 +89,11 @@ public abstract class DistributedRateLimiterBase {
     if (timeoutSeconds > 0 && shutdownMonitor == null) {
       throw new IllegalArgumentException("shutdownMonitor cannot be null if a timeout is used.");
     }
-
+  
+    if (shutdownMonitor != null && shutdownMonitor.isShutdownRequested()) {
+      throw new ShutdownRequestedException();
+    }
+  
     if (cacheService.isCacheAvailable()) {
       boolean permitAquired = false;
       if (timeoutSeconds == 0) {
