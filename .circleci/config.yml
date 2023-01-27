@@ -45,7 +45,7 @@ jobs:
       - checkout
       - run:
           name: "Validate build"
-          command: source buildscripts/validate_build.sh
+          command: source Infrastructure/Build-Scripts/validate_build.sh
   maven_verify:
     machine:
       image: ubuntu-2004:2022.07.1
@@ -53,7 +53,7 @@ jobs:
       - checkout
       - run:
           name: "Perform Maven Verify"
-          command: source buildscripts/mvn_verify.sh
+          command: source Infrastructure/Build-Scripts/mvn_verify.sh
   maven_deploy:
     machine:
       image: ubuntu-2004:2022.07.1
@@ -61,4 +61,4 @@ jobs:
       - checkout
       - run:
           name: "Deploy to Maven Central"
-          command: source buildscripts/mvn_deploy.sh
+          command: source Infrastructure/Build-Scripts/mvn_deploy.sh
