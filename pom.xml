@@ -4,8 +4,6 @@
   <modelVersion>4.0.0</modelVersion>
 
   <name>ebx-distributedratelimiters-sdk-parent</name>
-  <description>ebx-distributedratelimiters-sdk provides three core rate limiter/semaphore implementations, each of which uses a CacheService to issue tokens or permits for processes we wish to subject to rate or concurrency limits.</description>
-  <url>https://github.com/ebx/ebx-distributedratelimiters-sdk</url>
 
   <groupId>com.echobox</groupId>
   <artifactId>ebx-distributedratelimiters-sdk-parent</artifactId>
