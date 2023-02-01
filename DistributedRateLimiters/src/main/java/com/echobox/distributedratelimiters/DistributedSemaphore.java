@@ -189,7 +189,7 @@ public class DistributedSemaphore extends DistributedRateLimiterBase {
 
   @Override
   protected long getSleepTimeBetweenAcquireAttempts() {
-    //+1 so that we never return 0
-    return (long) (100 * rand.nextDouble()) + 1;
+    // Sleep random time between 1 and max expiry time, so on average sleep half the max expiry time
+    return Math.max((long) (cacheKeyExpireTimeSeconds * rand.nextDouble()), 1);
   }
 }
