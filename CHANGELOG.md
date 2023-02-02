@@ -7,3 +7,5 @@
 ## 1.0.3 (Jan 26, 2023)
 
 * Ensure DistributedSemaphore cannot sleep longer than expiry time
+
+## 1.0.4 (in progress)

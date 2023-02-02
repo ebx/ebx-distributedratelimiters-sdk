@@ -7,7 +7,7 @@
 
   <groupId>com.echobox</groupId>
   <artifactId>ebx-distributedratelimiters-sdk-parent</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <packaging>pom</packaging>
 
   <description>Reference implementations using common rate limiting algorithms extended to work in distributed systems.</description>
